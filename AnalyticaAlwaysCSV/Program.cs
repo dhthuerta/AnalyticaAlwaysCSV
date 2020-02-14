@@ -10,6 +10,7 @@ using AA.DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using AA.DAL.Data.UnitofWork;
 using AA.ExternalServices.AzureFileDownload;
+using AA.CrossDomain;
 
 namespace AnalyticaAlwaysCSV
 {
@@ -37,7 +38,7 @@ namespace AnalyticaAlwaysCSV
                 services.AddSingleton<IUnitOfWork, UnitOfWork>();
                 services.AddHostedService<AA_Manager>();
 
-                var connectionString = hostContext.Configuration["connString"];
+                var connectionString = hostContext.Configuration[Constants.CONN_STRING_KEY];
                 services.AddDbContext<AA_BBDDContext>(
                     opts => opts.UseSqlServer(connectionString, b => b.MigrationsAssembly("AnalyticaAlwaysCSV"))
                      ); ;
