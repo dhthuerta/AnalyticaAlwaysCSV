@@ -35,37 +35,26 @@ namespace AA.DAL.Data.UnitofWork
         }
         public void MassiveBulkSave(DataTable dataTable)
         {
-            using (var scope = Helper.CreateTransactionScope(int.Parse(config[Constants.GEN_TIMEOUT_KEY])))
+            SqlConnection sqlCon = new SqlConnection(_dataFactory.GetConnString());
+            sqlCon.Open();
+            using (SqlBulkCopy bulkInsert = new SqlBulkCopy(sqlCon))
             {
-                SqlConnection sqlCon = new SqlConnection(_dataFactory.GetConnString());
-                sqlCon.Open();
-                using (SqlBulkCopy bulkInsert = new SqlBulkCopy(sqlCon))
-                {
-                    bulkInsert.DestinationTableName = Constants.MAIN_TABLE;
-                    bulkInsert.BulkCopyTimeout = int.Parse(config[Constants.GEN_TIMEOUT_KEY]);
+                bulkInsert.DestinationTableName = Constants.MAIN_TABLE;
+                bulkInsert.BulkCopyTimeout = int.Parse(config[Constants.GEN_TIMEOUT_KEY]);
 
-                    foreach (var column in dataTable.Columns)
-                        bulkInsert.ColumnMappings.Add(column.ToString(), column.ToString());
+                foreach (var column in dataTable.Columns)
+                    bulkInsert.ColumnMappings.Add(column.ToString(), column.ToString());
 
-                    bulkInsert.WriteToServer(dataTable);
-                }
-
-                sqlCon.Close();
-
-                scope.Complete();
+                bulkInsert.WriteToServer(dataTable);
             }
 
+            sqlCon.Close();
         }
 
         public void MassiveDelete(string tableName)
         {
-            using (var scope = Helper.CreateTransactionScope(int.Parse(config[Constants.GEN_TIMEOUT_KEY])))
-            {
-                MainContext.Database.SetCommandTimeout(TimeSpan.FromSeconds(int.Parse(config[Constants.GEN_TIMEOUT_KEY])));
-                MainContext.Database.ExecuteSqlRaw(string.Format("DELETE FROM {0}", tableName));
-
-                scope.Complete();
-            }             
+            MainContext.Database.SetCommandTimeout(TimeSpan.FromSeconds(int.Parse(config[Constants.GEN_TIMEOUT_KEY])));
+            MainContext.Database.ExecuteSqlRaw(string.Format("DELETE FROM {0}", tableName));             
         }
         public bool AddEntity<T>(T entidad) where T : class
         {

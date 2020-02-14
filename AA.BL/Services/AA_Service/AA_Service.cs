@@ -21,12 +21,14 @@ namespace AA.BL.Services.AA_Service
     {
         private readonly IInventoryRepo inventoryRepo;
         private readonly IAzureFileDownload azDownload;
+        private readonly IConfiguration config;
         public readonly IUnitOfWork uow;
 
-        public AA_Service(IInventoryRepo _inventoryRepo, IAzureFileDownload _azDownload, IUnitOfWork _uow)
+        public AA_Service(IInventoryRepo _inventoryRepo, IAzureFileDownload _azDownload, IUnitOfWork _uow, IConfiguration _config)
         {
             inventoryRepo = _inventoryRepo;
             azDownload = _azDownload;
+            config = _config;
             uow = _uow;
         }
 
@@ -41,17 +43,23 @@ namespace AA.BL.Services.AA_Service
             Console.WriteLine("Inicio conversión a datatable: " + DateTime.Now);
             var dataTable = Helper.ToDataTable(dto.FileString);           
             Console.WriteLine("fin conversión a datatable: " + DateTime.Now);
-           
-            if (inventoryRepo.GetCount() > 0)
-            {
-                Console.WriteLine("Inicio borrado de carga anterior: " + DateTime.Now);
-                uow.MassiveDelete(Constants.MAIN_TABLE);
-                Console.WriteLine("Fin borrado de carga anterior: " + DateTime.Now);
-            }             
 
-            Console.WriteLine("Inicio guardado masivo: " + DateTime.Now);
-            uow.MassiveBulkSave(dataTable);
-            Console.WriteLine("Fin guardado masivo: " + DateTime.Now);
+            using (var scope = Helper.CreateTransactionScope(int.Parse(config[Constants.GEN_TIMEOUT_KEY])))
+            {
+                if (inventoryRepo.GetCount() > 0)
+                {
+                    Console.WriteLine("Inicio borrado de carga anterior: " + DateTime.Now);
+                    uow.MassiveDelete(Constants.MAIN_TABLE);
+                    Console.WriteLine("Fin borrado de carga anterior: " + DateTime.Now);
+                }
+
+                Console.WriteLine("Inicio guardado masivo: " + DateTime.Now);
+                uow.MassiveBulkSave(dataTable);
+                Console.WriteLine("Fin guardado masivo: " + DateTime.Now);
+
+                scope.Complete();
+            }
+            
 
             return true;
         }
