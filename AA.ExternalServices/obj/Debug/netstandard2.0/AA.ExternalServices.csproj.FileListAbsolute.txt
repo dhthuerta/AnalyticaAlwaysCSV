@@ -1,0 +1,11 @@
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\bin\Debug\netstandard2.0\AA.ExternalServices.deps.json
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\bin\Debug\netstandard2.0\AA.ExternalServices.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\obj\Debug\netstandard2.0\AA.ExternalServices.AssemblyInfoInputs.cache
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\obj\Debug\netstandard2.0\AA.ExternalServices.AssemblyInfo.cs
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\obj\Debug\netstandard2.0\AA.ExternalServices.csprojAssemblyReference.cache
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\bin\Debug\netstandard2.0\AA.ExternalServices.pdb
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\bin\Debug\netstandard2.0\AA.CrossDomain.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\bin\Debug\netstandard2.0\AA.CrossDomain.pdb
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\obj\Debug\netstandard2.0\AA.ExternalServices.csproj.CopyComplete
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\obj\Debug\netstandard2.0\AA.ExternalServices.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.ExternalServices\obj\Debug\netstandard2.0\AA.ExternalServices.pdb

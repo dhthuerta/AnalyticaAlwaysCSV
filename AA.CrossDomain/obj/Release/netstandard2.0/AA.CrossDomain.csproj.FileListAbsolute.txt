@@ -1,0 +1,8 @@
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\bin\Release\netstandard2.0\AA.CrossDomain.deps.json
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\bin\Release\netstandard2.0\AA.CrossDomain.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\bin\Release\netstandard2.0\AA.CrossDomain.pdb
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\obj\Release\netstandard2.0\AA.CrossDomain.csprojAssemblyReference.cache
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\obj\Release\netstandard2.0\AA.CrossDomain.AssemblyInfoInputs.cache
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\obj\Release\netstandard2.0\AA.CrossDomain.AssemblyInfo.cs
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\obj\Release\netstandard2.0\AA.CrossDomain.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.CrossDomain\obj\Release\netstandard2.0\AA.CrossDomain.pdb

@@ -1,0 +1,15 @@
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.BL.deps.json
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.BL.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.BL.pdb
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\obj\Debug\netstandard2.0\AA.BL.csprojAssemblyReference.cache
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\obj\Debug\netstandard2.0\AA.BL.AssemblyInfoInputs.cache
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\obj\Debug\netstandard2.0\AA.BL.AssemblyInfo.cs
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\obj\Debug\netstandard2.0\AA.BL.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\obj\Debug\netstandard2.0\AA.BL.pdb
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.DAL.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.DAL.pdb
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\obj\Debug\netstandard2.0\AA.BL.csproj.CopyComplete
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.CrossDomain.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.ExternalServices.dll
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.CrossDomain.pdb
+C:\Users\dht_h\source\repos\AnalyticaAlwaysCSV\AA.BL\bin\Debug\netstandard2.0\AA.ExternalServices.pdb
